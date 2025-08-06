@@ -1,0 +1,92 @@
+body {
+    background: linear-gradient(135deg, #0f0824 0%, #0c081f 100%);
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: rgba(150, 132, 214, 0.12);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    padding: 40px 30px;
+    text-align: center;
+    color: #fff;
+    max-width: 350px;
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+}
+
+.stopwatch {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.buttons button {
+    background: linear-gradient(90deg, #110427 0%, #8d93e2 100%);
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 12px 22px;
+    margin: 0 8px 14px 8px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px 0 #7b2ff240;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.buttons button::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(120deg, #fff5fa55 0%, #b3aebd55 100%);
+    opacity: 0.7;
+    filter: blur(8px);
+    z-index: -1;
+    transition: opacity 0.3s;
+}
+
+.buttons button:hover {
+    background: linear-gradient(90deg, #a1adb3 0%, #7b2ff2 100%);
+    box-shadow: 0 0 16px 2px #f357a880, 0 0 24px 4px #7b2ff240;
+    transform: translateY(-2px) scale(1.04);
+}
+
+.buttons button:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 6px 1px #7b2ff280, 0 0 12px 2px #f357a880;
+}
+
+#laps {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+#laps li {
+    background: rgba(202, 198, 206, 0.2);
+    margin: 6px 0;
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1rem;
+    text-align: left;
+}
